@@ -28,3 +28,4 @@ CREATE TABLE IF NOT EXISTS `meldingen` (
 
 INSERT INTO `meldingen` (`attractie`, `type`, `capaciteit`, `prioriteit`, `melder`, `gemeld_op`, `overige_info`) VALUES
 ('Terminator3000', 'achtbaan', 200, 1, 'M. Onteur', '2020-01-01 00:00:00', 'Dit is een testmelding.');
+curiocuriomeldingen

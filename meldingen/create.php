@@ -21,7 +21,16 @@
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
-                <!-- hier komt een dropdown -->
+                <select name="type" id="type">
+                    <option value="">- kies een type -</option>
+                    <option value="achtbaan">achtbaan</option>
+                    <option value="waterattractie">waterattractie</option>
+                    <option value="kinderattractie">kinderattractie</option>
+                    <option value="draaiend">draaiend</option>
+                    <option value="horeca">horeca</option>
+                    <option value="show">show</option>
+                    <option value="overig">overig</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="capaciteit">Capaciteit p/uur:</label>
