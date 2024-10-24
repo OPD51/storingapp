@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])){
+        header("location: ../login.php?msg=je moet nog inloggen");
+        exit;
+    }
+?>
 <!doctype html>
 <html lang="nl">
 
@@ -12,8 +19,9 @@
 
     <div class="container">
         <h1>Nieuwe melding</h1>
-
         <form action="../backend/meldingenController.php" method="POST">
+
+            <input type="hidden" name="action" value="create">
         
             <div class="form-group">
                 <label for="attractie">Naam attractie:</label>
@@ -37,8 +45,17 @@
                 <input type="number" min="0" name="capaciteit" id="capaciteit" class="form-input">
             </div>
             <div class="form-group">
+                <label for="prioriteit">prioriteit:</label>
+                <input type="checkbox" name="prioriteit">
+                <label for="prioriteit"> ja</label>
+            </div>
+            <div class="form-group">
                 <label for="melder">Naam melder:</label>
                 <input type="text" name="melder" id="melder" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="overige_info">overige_info</label>
+                <textarea name="overige_info" id="" cols="30" rows="10"></textarea>
             </div>
             
             <input type="submit" value="Verstuur melding">
